@@ -1,18 +1,25 @@
 <template>
   <CompleteWidthTemplateVue>
     <router-link to="/animations">
-      <div class="m-2 p-2 w-32 h-32 bg-slate-700 transition highlight">
+      <div class="m-2 p-2 w-32 h-32 bg-slate-700 transition highlight relative">
         <img src="@/assets/earthAnimation.gif" />
         Animation
       </div>
     </router-link>
 
     <router-link to="/background-colors">
-      <div class="m-2 p-2 w-32 h-32 bg-slate-700">
+      <div class="m-2 p-2 w-32 h-32 bg-slate-700 highlight relative">
         <img src="@/assets/earthAnimation.gif" />
         Background Colors
       </div>
     </router-link>
+
+    <router-link to="/svg-animations"
+      ><div class="m-2 p-2 w-32 h-32 bg-slate-700 highlight relative">
+        <img src="@/assets/earthAnimation.gif" />
+        Svg Animations
+      </div></router-link
+    >
 
     <div class="m-2 p-2 w-32 h-32 bg-slate-700">
       <img src="@/assets/resources.jpeg" />

@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const SimpleCentered = () => import("@/pages/SimpleCentered.vue");
-const Design = () => import("@/pages/Design.vue");
+const Main = () => import("@/pages/Main.vue");
 const Animations = () => import("@/pages/Animations.vue");
 const BackgroundColors = () => import("@/pages/BackgroundColors.vue");
 const ScrollEffects = () => import("@/pages/ScrollEffects.vue");
+const SvgAnimations = () => import("@/pages/SvgAnimations.vue");
 
 const routes: RouteRecordRaw[] = [
   {
@@ -15,9 +16,9 @@ const routes: RouteRecordRaw[] = [
 
   {
     path: "/",
-    component: Design,
-    name: "Design",
-    meta: { title: "Design" },
+    component: Main,
+    name: "Main",
+    meta: { title: "Main" },
   },
   {
     path: "/animations",
@@ -36,6 +37,12 @@ const routes: RouteRecordRaw[] = [
     component: ScrollEffects,
     name: "Scroll Effects",
     meta: { title: "Scroll Effects" },
+  },
+  {
+    path: "/svg-animations",
+    component: SvgAnimations,
+    name: "Svg Animations",
+    meta: { title: "Svg Animations" },
   },
 ];
 

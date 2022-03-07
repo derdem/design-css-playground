@@ -1,16 +1,16 @@
 <template>
-  <CompleteWidthTemplateVue>
-    <div class="fixed">
-      <div>Scroll position</div>
-      <div>x: {{ xScroll }}</div>
-      <div>y: {{ yScroll }}</div>
+  <CompleteWidthTemplateVue class="fixed">
+    <div class="w-1/2 h-1/3">
+      <div>
+        <div>Scroll position</div>
+        <div>x: {{ xScroll }}</div>
+        <div>y: {{ yScroll }}</div>
 
-      <div>Mouse position</div>
-      <div>x: {{ xMouse }}</div>
-      <div>y: {{ yMouse }}</div>
+        <div>Mouse position</div>
+        <div>x: {{ xMouse }}</div>
+        <div>y: {{ yMouse }}</div>
+      </div>
     </div>
-    <div class="h-[2000px] w-32"></div>
-    <div class="w-[2000px]"></div>
   </CompleteWidthTemplateVue>
 </template>
 
