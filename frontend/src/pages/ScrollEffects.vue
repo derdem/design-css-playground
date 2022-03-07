@@ -8,18 +8,6 @@
         <div v-for="(word, index) in words" :key="index">{{ word }} <br /></div>
       </div>
 
-      <div class="w-full bg-sky-800 p-4 rounded-xl hidden">
-        <div>
-          <div>Scroll position</div>
-          <div>x: {{ xScroll }}</div>
-          <div>y: {{ yScroll }}</div>
-
-          <div>Mouse position</div>
-          <div>x: {{ xMouse }}</div>
-          <div>y: {{ yMouse }}</div>
-        </div>
-      </div>
-
       <div
         class="min-w-[200px] w-full h-60 mt-4 bg-sky-800 p-4 rounded-xl overflow-auto text-center"
       >
@@ -31,18 +19,9 @@
 
 <script setup lang="ts">
 import CompleteWidthTemplateVue from "@/components/CompleteWidthTemplate.vue";
-import { useWindowScroll, useMouse } from "@vueuse/core";
 import { computed, ref } from "vue";
 
-const windowScroll = useWindowScroll();
 const scroll1 = ref(0);
-
-const xScroll = windowScroll.x;
-const yScroll = windowScroll.y;
-
-const mouse = useMouse();
-const xMouse = mouse.x;
-const yMouse = mouse.y;
 
 const handleScroll = ({ currentTarget }: UIEvent) => {
   const clientHeight = currentTarget.clientHeight;
