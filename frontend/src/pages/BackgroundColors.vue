@@ -111,11 +111,93 @@
     >
       <div class="center text-center"></div>
     </div>
+
+    <div class="basis-full">Background effects - Track Mouse</div>
+    <div
+      class="basis-1/4 m-2 p-2 w-32 h-32 bg-slate-700 relative"
+      :style="`
+        background-image: radial-gradient(
+          farthest-side at ${xPercent1}% ${yPercent1}%,
+          #4338ca,
+          #c7d2fe
+        );
+      `"
+      @mousemove="handleMousemove1"
+    >
+      <div class="center text-center">Radial gradient</div>
+    </div>
+    <div
+      class="basis-1/4 m-2 p-2 w-32 h-32 bg-slate-700 relative"
+      :style="`
+        background-image: radial-gradient(
+          closest-side at ${xPercent2}% ${yPercent2}%,
+          #4338ca,
+          #c7d2fe
+        );
+      `"
+      @mousemove="handleMousemove2"
+    >
+      <div class="center text-center">Radial gradient</div>
+    </div>
+    <div
+      class="basis-1/4 m-2 p-2 w-32 h-32 bg-slate-700 relative"
+      :style="`
+        background-image: radial-gradient(
+          closest-corner at ${xPercent3}% ${yPercent3}%,
+          #4338ca,
+          #c7d2fe
+        );
+      `"
+      @mousemove="handleMousemove3"
+    >
+      <div class="center text-center">Radial gradient</div>
+    </div>
+    <div
+      class="basis-1/4 m-2 p-2 w-32 h-32 bg-slate-700 relative"
+      :style="`
+        background-image: radial-gradient(
+          farthest-corner at ${xPercent4}% ${yPercent4}%,
+          #4338ca,
+          #c7d2fe
+        );
+      `"
+      @mousemove="handleMousemove4"
+    >
+      <div class="center text-center">Radial gradient</div>
+    </div>
   </CompleteWidthTemplateVue>
 </template>
 
 <script setup lang="ts">
 import CompleteWidthTemplateVue from "@/components/CompleteWidthTemplate.vue";
+import { Ref, ref } from "vue";
+
+const handleMousemove =
+  (x: Ref<number>, y: Ref<number>) => (event: MouseEvent) => {
+    const { clientHeight, clientWidth } = event.target;
+    const { offsetX, offsetY } = event;
+
+    x.value = (offsetX * 100) / clientWidth;
+    y.value = (offsetY * 100) / clientHeight;
+    //console.log(event);
+    //console.log(clientHeight, clientWidth, offsetX, offsetY, x.value, y.value);
+  };
+
+const xPercent1 = ref(50);
+const yPercent1 = ref(50);
+const handleMousemove1 = handleMousemove(xPercent1, yPercent1);
+
+const xPercent2 = ref(50);
+const yPercent2 = ref(50);
+const handleMousemove2 = handleMousemove(xPercent2, yPercent2);
+
+const xPercent3 = ref(50);
+const yPercent3 = ref(50);
+const handleMousemove3 = handleMousemove(xPercent3, yPercent3);
+
+const xPercent4 = ref(50);
+const yPercent4 = ref(50);
+const handleMousemove4 = handleMousemove(xPercent4, yPercent4);
 </script>
 
 <style scoped lang="scss">
