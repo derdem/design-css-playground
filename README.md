@@ -1,39 +1,29 @@
-My own project
+# Playground for testing out Css tricks and animations
 
-# mysql container
+-   Animations
+-   Background effects
+-   scroll effects
+-   svg animations
 
-docker run -p 3306:3306 --name database-mysql -e MYSQL_ROOT_PASSWORD=envelio123 -d mysql:latest
+# Techstack
 
-# connect to mysql service
+## frontend
 
-## enter container
+-   Typescript
+-   Vite
+-   Vue 3
+-   Pinia
+-   Vue Router
 
-docker compose exec database mysql -u root -p
+## backend
 
-## show databases
+-   Typescript
+-   express
 
-SHOW DATABASES;
+# Starting application
 
-## create database called app
+-   cd frontend && npm install
+-   npm run dev
 
-CREATE DATABASE app;
-
-## use the database
-
-USE app;
-
-## fill database with data from sql file
-
-source application/setup.sql
-
-## show tables
-
-SHOW TABLES;
-
-# express build
-
-docker build -t express .
-
-# express container
-
-docker run -p 3000:3000 express
+if you have docker installed you can also go to the root of this project and start it via `docker compose up`
+this also starts the backend which however has no functionality yet.
