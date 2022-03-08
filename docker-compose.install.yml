@@ -2,13 +2,12 @@ version: '3.9'
 services:
   backend:
     image: node:latest
-    restart: always
     volumes:
       - ./backend:/application
     env_file:
       ./backend/.env
     working_dir: /application
-    command: bash -c "npm run build && node ."
+    command: bash -c "yarn install"
     ports:
       - 3001:3001
   frontend:
@@ -20,6 +19,4 @@ services:
       ./frontend/.env
     ports:
       - 4000:4000
-      - 5001:5000
-    command: bash -c "yarn && yarn preview"
-
+    command: bash -c "yarn install"
