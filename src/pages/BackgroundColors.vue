@@ -124,7 +124,7 @@
       `"
       @mousemove="handleMousemove1"
     >
-      <div class="center text-center">Radial gradient</div>
+      <div class="center text-center"></div>
     </div>
     <div
       class="basis-1/4 m-2 p-2 w-32 h-32 bg-slate-700 relative"
@@ -137,7 +137,7 @@
       `"
       @mousemove="handleMousemove2"
     >
-      <div class="center text-center">Radial gradient</div>
+      <div class="center text-center"></div>
     </div>
     <div
       class="basis-1/4 m-2 p-2 w-32 h-32 bg-slate-700 relative"
@@ -150,7 +150,7 @@
       `"
       @mousemove="handleMousemove3"
     >
-      <div class="center text-center">Radial gradient</div>
+      <div class="center text-center"></div>
     </div>
     <div
       class="basis-1/4 m-2 p-2 w-32 h-32 bg-slate-700 relative"
@@ -163,7 +163,7 @@
       `"
       @mousemove="handleMousemove4"
     >
-      <div class="center text-center">Radial gradient</div>
+      <div class="center text-center"></div>
     </div>
   </CompleteWidthTemplateVue>
 </template>

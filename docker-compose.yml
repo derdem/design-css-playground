@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   backend:
-    image: node:latest
+    image: node:16-buster
     restart: always
     volumes:
       - ./backend:/application
@@ -12,7 +12,7 @@ services:
     ports:
       - 3001:3001
   frontend:
-    image: node:latest
+    image: node:16-buster
     volumes:
       - ./frontend:/application
     working_dir: /application
