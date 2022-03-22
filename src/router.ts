@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { baseUrl } from "@/common/baseUrl";
 
 const SimpleCentered = () => import("@/pages/SimpleCentered.vue");
 const Main = () => import("@/pages/Main.vue");
@@ -47,7 +48,7 @@ const routes: RouteRecordRaw[] = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(baseUrl),
   routes,
 });
 
