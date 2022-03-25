@@ -169,35 +169,25 @@
 </template>
 
 <script setup lang="ts">
+import { setXYRelativeCoordiante } from "@/common/mouse";
 import CompleteWidthTemplateVue from "@/components/CompleteWidthTemplate.vue";
-import { Ref, ref } from "vue";
-
-const handleMousemove =
-  (x: Ref<number>, y: Ref<number>) => (event: MouseEvent) => {
-    const { clientHeight, clientWidth } = event.target;
-    const { offsetX, offsetY } = event;
-
-    x.value = (offsetX * 100) / clientWidth;
-    y.value = (offsetY * 100) / clientHeight;
-    //console.log(event);
-    //console.log(clientHeight, clientWidth, offsetX, offsetY, x.value, y.value);
-  };
+import { ref } from "vue";
 
 const xPercent1 = ref(50);
 const yPercent1 = ref(50);
-const handleMousemove1 = handleMousemove(xPercent1, yPercent1);
+const handleMousemove1 = setXYRelativeCoordiante(xPercent1, yPercent1);
 
 const xPercent2 = ref(50);
 const yPercent2 = ref(50);
-const handleMousemove2 = handleMousemove(xPercent2, yPercent2);
+const handleMousemove2 = setXYRelativeCoordiante(xPercent2, yPercent2);
 
 const xPercent3 = ref(50);
 const yPercent3 = ref(50);
-const handleMousemove3 = handleMousemove(xPercent3, yPercent3);
+const handleMousemove3 = setXYRelativeCoordiante(xPercent3, yPercent3);
 
 const xPercent4 = ref(50);
 const yPercent4 = ref(50);
-const handleMousemove4 = handleMousemove(xPercent4, yPercent4);
+const handleMousemove4 = setXYRelativeCoordiante(xPercent4, yPercent4);
 </script>
 
 <style scoped lang="scss">

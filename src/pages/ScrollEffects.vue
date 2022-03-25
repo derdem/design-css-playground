@@ -13,6 +13,7 @@
       >
         <div v-for="(word, index) in words" :key="index">{{ word }} <br /></div>
       </div>
+      <!-- scroll effect idea. Instead of having a vertical scrollbar the scroll percentage can be displayed as a round loading spinner in the top right corner of the html node -->
     </div>
   </CompleteWidthTemplateVue>
 </template>
