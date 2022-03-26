@@ -25,9 +25,8 @@ import { computed, ref } from "vue";
 const scroll1 = ref(0);
 
 const handleScroll = ({ currentTarget }: UIEvent) => {
-  const clientHeight = currentTarget.clientHeight;
-  const scrollTop = currentTarget.scrollTop;
-  const scrollHeight = currentTarget.scrollHeight;
+  const { clientHeight, scrollTop, scrollHeight } =
+    currentTarget as HTMLElement;
 
   const percentage = scrollTop / (scrollHeight - clientHeight);
   console.log(percentage);
