@@ -43,6 +43,13 @@
           >Svg Animations</a
         >
       </router-link>
+      <router-link to="/canvas-effects">
+        <a
+          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="#"
+          >Canvas Effects</a
+        >
+      </router-link>
     </nav>
     <main class="flex grow overflow-h-auto h-full">
       <slot />

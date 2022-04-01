@@ -1,7 +1,5 @@
 <template>
-  <div
-    :class="`transition ease-in-out duration-100 min-w-[200px] w-full mt-4 h-72 overflow-auto rounded text-center bg-sky-800`"
-  >
+  <EffectCardVue>
     <svg
       class="h-full w-full"
       @mousemove="handleRubberEffect"
@@ -14,10 +12,11 @@
     >
       <path class="path-transition" fill="#ff6e48" :d="path"></path>
     </svg>
-  </div>
+  </EffectCardVue>
 </template>
 
 <script setup lang="ts">
+import EffectCardVue from "../EffectCard.vue";
 import { setXYRelativeCoordiante } from "@/common/mouse";
 import { ref, computed } from "vue";
 

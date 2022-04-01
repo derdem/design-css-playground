@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import CompleteWidthTemplateVue from "@/components/CompleteWidthTemplate.vue";
-import ChewingGumVue from "@/components/ChewingGum.vue";
-import BouncyBallsVue from "@/components/BouncyBalls.vue";
-import movingNetVue from "@/components/movingNet.vue";
+import ChewingGumVue from "@/components/svgEffects/ChewingGum.vue";
+import BouncyBallsVue from "@/components/svgEffects/BouncyBalls.vue";
+import movingNetVue from "@/components/svgEffects/MovingNet.vue";
 </script>

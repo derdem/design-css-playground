@@ -7,6 +7,7 @@ const Animations = () => import("@/pages/Animations.vue");
 const BackgroundColors = () => import("@/pages/BackgroundColors.vue");
 const ScrollEffects = () => import("@/pages/ScrollEffects.vue");
 const SvgAnimations = () => import("@/pages/SvgAnimations.vue");
+const CanvasEffects = () => import("@/pages/CanvasEffects.vue");
 
 const routes: RouteRecordRaw[] = [
   {
@@ -44,6 +45,12 @@ const routes: RouteRecordRaw[] = [
     component: SvgAnimations,
     name: "Svg Animations",
     meta: { title: "Svg Animations" },
+  },
+  {
+    path: "/canvas-effects",
+    component: CanvasEffects,
+    name: "Canvas Effects",
+    meta: { title: "Canvas Effects" },
   },
 ];
 

@@ -1,7 +1,5 @@
 <template>
-  <div
-    :class="`transition ease-in-out duration-100 min-w-[200px] w-full mt-4 h-72 overflow-auto rounded text-center bg-sky-800`"
-  >
+  <EffectCardVue>
     <svg class="h-full w-full" :ref="($el) => (svg = $el)">
       <path
         v-for="(path, index) in paths"
@@ -10,10 +8,11 @@
         :d="path"
       ></path>
     </svg>
-  </div>
+  </EffectCardVue>
 </template>
 
 <script setup lang="ts">
+import EffectCardVue from "../EffectCard.vue";
 import { ref, computed, reactive } from "vue";
 interface MovingPoint {
   x: number;
