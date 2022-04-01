@@ -6,7 +6,7 @@
     "build": "vite build",
     "preview": "vite build && vite preview",
     "start": "yarn dev & wait-on tcp:3000 -v",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
+    "lint": "eslint ./src --quiet --ext .js,.jsx,.ts,.tsx,.vue",
     "test": "cypress open",
     "test-components": "cypress open-ct",
     "test:ci": "cypress run --headless",
