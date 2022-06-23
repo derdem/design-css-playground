@@ -55,11 +55,19 @@
       <slot />
     </main>
   </div>
-  <footer class="container p-6 text-sm">Created by Nikodem Bienia</footer>
+  <footer class="container p-6 text-sm">
+    <div class="flex items-center">
+      <div class="flex-item h-[30px] mr-3 bg-white rounded-sm">
+        <meImageVue />
+      </div>
+      <div class="flex-item">Created by Nikodem Bienia</div>
+    </div>
+  </footer>
 </template>
 <script setup lang="ts">
 import { useHead } from "@vueuse/head";
 import { useRouter } from "vue-router";
+import meImageVue from "./svgImages/meImage.vue";
 
 const props = defineProps<{
   title?: string;

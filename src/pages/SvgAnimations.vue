@@ -5,6 +5,7 @@
       <BouncyBallsVue />
       <movingNetVue />
       <letSeeWhatThisWillBeVue />
+      <meVue />
     </div>
   </CompleteWidthTemplateVue>
 </template>
@@ -15,4 +16,5 @@ import ChewingGumVue from "@/components/svgEffects/ChewingGum.vue";
 import BouncyBallsVue from "@/components/svgEffects/BouncyBalls.vue";
 import movingNetVue from "@/components/svgEffects/MovingNet.vue";
 import letSeeWhatThisWillBeVue from "@/components/svgEffects/letSeeWhatThisWillBe.vue";
+import meVue from "@/components/svgEffects/me.vue";
 </script>
