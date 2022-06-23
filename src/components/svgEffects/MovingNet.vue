@@ -1,6 +1,11 @@
 <template>
   <EffectCardVue>
-    <svg class="h-full w-full" :ref="($el) => (svg = $el)">
+    <svg
+      class="h-full w-full"
+      :ref="($el) => (svg = $el)"
+      @mouseenter="mouseEnterHandler"
+      @mouseleave="mouseLeaveHandler"
+    >
       <path
         v-for="(path, index) in paths"
         :key="index"
@@ -87,7 +92,7 @@ const paths = computed(() => {
   });
 });
 
-setInterval(() => {
+const animatePaths = () => {
   if (svg.value) {
     const { clientHeight, clientWidth } = svg.value;
     movingPoints.value.forEach(
@@ -109,5 +114,12 @@ setInterval(() => {
       }
     );
   }
-}, 15);
+};
+let intervalId: NodeJS.Timeout;
+const mouseEnterHandler = () => {
+  intervalId = setInterval(animatePaths, 15);
+};
+const mouseLeaveHandler = () => {
+  clearInterval(intervalId);
+};
 </script>

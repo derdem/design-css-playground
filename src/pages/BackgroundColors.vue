@@ -118,8 +118,8 @@
       :style="`
         background-image: radial-gradient(
           farthest-side at ${xPercent1}% ${yPercent1}%,
-          #4338ca,
-          #c7d2fe
+          #ff6e48,
+          #075985
         );
       `"
       @mousemove="handleMousemove1"
@@ -131,8 +131,8 @@
       :style="`
         background-image: radial-gradient(
           closest-side at ${xPercent2}% ${yPercent2}%,
-          #4338ca,
-          #c7d2fe
+          #ff6e48,
+          #075985
         );
       `"
       @mousemove="handleMousemove2"
@@ -144,8 +144,8 @@
       :style="`
         background-image: radial-gradient(
           closest-corner at ${xPercent3}% ${yPercent3}%,
-          #4338ca,
-          #c7d2fe
+          #ff6e48,
+          #075985
         );
       `"
       @mousemove="handleMousemove3"
@@ -157,8 +157,8 @@
       :style="`
         background-image: radial-gradient(
           farthest-corner at ${xPercent4}% ${yPercent4}%,
-          #4338ca,
-          #c7d2fe
+          #ff6e48,
+          #075985
         );
       `"
       @mousemove="handleMousemove4"
@@ -192,85 +192,85 @@ const handleMousemove4 = setXYRelativeCoordiante(xPercent4, yPercent4);
 
 <style scoped lang="scss">
 .custom-gradient-1 {
-  background-image: linear-gradient(to bottom, #c7d2fe, #4338ca);
+  background-image: linear-gradient(to bottom, #075985, #ff6e48);
 }
 .custom-gradient-2 {
-  background-image: linear-gradient(to top, #c7d2fe, #4338ca);
+  background-image: linear-gradient(to top, #075985, #ff6e48);
 }
 .custom-gradient-3 {
-  background-image: linear-gradient(to right, #c7d2fe, #4338ca);
+  background-image: linear-gradient(to right, #075985, #ff6e48);
 }
 .custom-gradient-4 {
-  background-image: linear-gradient(to left, #c7d2fe, #4338ca);
+  background-image: linear-gradient(to left, #075985, #ff6e48);
 }
 .custom-gradient-5 {
-  background-image: linear-gradient(to bottom right, #c7d2fe, #4338ca);
+  background-image: linear-gradient(to bottom right, #075985, #ff6e48);
 }
 .custom-gradient-6 {
-  background-image: linear-gradient(to bottom left, #c7d2fe, #4338ca);
+  background-image: linear-gradient(to bottom left, #075985, #ff6e48);
 }
 .custom-gradient-7 {
-  background-image: linear-gradient(to top right, #c7d2fe, #4338ca);
+  background-image: linear-gradient(to top right, #075985, #ff6e48);
 }
 .custom-gradient-8 {
-  background-image: linear-gradient(to top left, #c7d2fe, #4338ca);
+  background-image: linear-gradient(to top left, #075985, #ff6e48);
 }
 
 .custom-gradient-9 {
-  background-image: radial-gradient(#4338ca, #c7d2fe);
+  background-image: radial-gradient(#ff6e48, #075985);
 }
 
 .custom-gradient-10 {
-  background-image: radial-gradient(closest-side at 65% 65%, #4338ca, #c7d2fe);
+  background-image: radial-gradient(closest-side at 65% 65%, #ff6e48, #075985);
 }
 .custom-gradient-11 {
-  background-image: radial-gradient(farthest-side at 65% 65%, #4338ca, #c7d2fe);
+  background-image: radial-gradient(farthest-side at 65% 65%, #ff6e48, #075985);
 }
 .custom-gradient-12 {
   background-image: radial-gradient(
     closest-corner at 65% 65%,
-    #4338ca,
-    #c7d2fe
+    #ff6e48,
+    #075985
   );
 }
 .custom-gradient-13 {
   background-image: radial-gradient(
     farthest-corner at 65% 65%,
-    #4338ca,
-    #c7d2fe
+    #ff6e48,
+    #075985
   );
 }
 
 .custom-gradient-14 {
-  background-image: repeating-radial-gradient(#4338ca, #c7d2fe 10%);
+  background-image: repeating-radial-gradient(#ff6e48, #075985 10%);
 }
 
 .custom-gradient-15 {
   background-image: repeating-radial-gradient(
     closest-side at 65% 65%,
-    #4338ca,
-    #c7d2fe 10%
+    #ff6e48,
+    #075985 10%
   );
 }
 .custom-gradient-16 {
   background-image: repeating-radial-gradient(
     farthest-side at 65% 65%,
-    #4338ca,
-    #c7d2fe 10%
+    #ff6e48,
+    #075985 10%
   );
 }
 .custom-gradient-17 {
   background-image: repeating-radial-gradient(
     closest-corner at 65% 65%,
-    #4338ca,
-    #c7d2fe 10%
+    #ff6e48,
+    #075985 10%
   );
 }
 .custom-gradient-18 {
   background-image: repeating-radial-gradient(
     farthest-corner at 65% 65%,
-    #4338ca,
-    #c7d2fe 10%
+    #ff6e48,
+    #075985 10%
   );
 }
 </style>

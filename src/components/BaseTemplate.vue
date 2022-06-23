@@ -10,42 +10,58 @@
     <nav class="min-w-fit px-4 pb-4">
       <router-link to="/">
         <a
-          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg transition highlight relative"
+          :class="{ selected: router.currentRoute.value.path === '/' }"
           href="#"
           >Main</a
         >
       </router-link>
       <router-link to="/animations">
         <a
-          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg transition highlight relative"
+          :class="{
+            selected: router.currentRoute.value.path === '/animations',
+          }"
           href="#"
           >Animation Effects</a
         >
       </router-link>
       <router-link to="/background-colors">
         <a
-          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg transition highlight relative"
+          :class="{
+            selected: router.currentRoute.value.path === '/background-colors',
+          }"
           href="#"
           >Background effects</a
         >
       </router-link>
       <router-link to="/scroll-effects">
         <a
-          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg transition highlight relative"
+          :class="{
+            selected: router.currentRoute.value.path === '/scroll-effects',
+          }"
           href="#"
           >ScrollEffects</a
         >
       </router-link>
       <router-link to="/svg-animations">
         <a
-          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg transition highlight relative"
+          :class="{
+            selected: router.currentRoute.value.path === '/svg-animations',
+          }"
           href="#"
           >Svg Animations</a
         >
       </router-link>
       <router-link to="/canvas-effects">
         <a
-          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-white focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="block px-4 py-2 text-sm font-semibold bg-transparent rounded-lg transition highlight relative"
+          :class="{
+            selected: router.currentRoute.value.path === '/canvas-effects',
+          }"
           href="#"
           >Canvas Effects</a
         >

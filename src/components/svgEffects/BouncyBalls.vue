@@ -1,6 +1,11 @@
 <template>
   <EffectCardVue>
-    <svg class="h-full w-full" :ref="($el) => (svg = $el)">
+    <svg
+      class="h-full w-full"
+      :ref="($el) => (svg = $el)"
+      @mouseenter="mouseoverHandler"
+      @mouseleave="mouseoutHandler"
+    >
       <circle
         v-for="(point, index) in points"
         :key="index"
@@ -41,7 +46,7 @@ const points = computed(() => {
   return points;
 });
 
-setInterval(() => {
+const animatePoints = () => {
   if (svg.value) {
     const { clientHeight, clientWidth } = svg.value;
     points.value.forEach(
@@ -63,5 +68,14 @@ setInterval(() => {
       }
     );
   }
-}, 15);
+};
+
+let intervalId: NodeJS.Timeout;
+
+const mouseoverHandler = () => {
+  intervalId = setInterval(animatePoints, 15);
+};
+const mouseoutHandler = () => {
+  clearInterval(intervalId);
+};
 </script>
